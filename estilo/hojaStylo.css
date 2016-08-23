@@ -1,0 +1,426 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	background-color: #f5f5f5;
+	color: #424242;
+
+	}
+
+span{
+	font-family: 'Lato', bold;
+	font-size: 1.2em;
+
+}
+
+/*estilo imagen principal*/
+section#banner{
+	width: 100%;
+	background-image: url(../img/img-p-1.png);
+	height: 410px;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+
+/*estilo navegador*/
+header{
+	position: fixed;
+	width: 100%;
+	height: 70px;
+	background-color: transparent;
+	z-index: 1;
+}
+
+nav{
+	display: table;
+	width: 80%;
+	margin: auto;
+	margin-top: 0.8em;
+	height: 3em;
+	-webkit-transition: margin-left .5s;
+	
+
+}
+
+nav > ul{
+	display: block;
+	float: right;
+	list-style: none;
+
+}
+
+nav > ul > li{
+	float: right;
+	margin: 0.5em;
+	padding: 2px;
+
+}
+
+ul, a{
+	color: #424242;
+	text-decoration: none;
+}
+
+/*estilo logo*/
+#logo{
+	display: block;
+	float: left;
+	font-size: 1.5em;
+}
+
+img#diamond{
+	width: 20%;
+	height: auto;
+	margin-top: 50px;
+	margin-left: 250px;
+	-webkit-transition: margin-left .5s, height .5s, margin-right .5s, margin-top .5s;
+}
+
+/*estilo contenedor principal*/
+.container{
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+}
+
+/*estilo texto de bienvenida*/
+#welcome{
+	width: auto;
+	height: 150px;
+	text-align: center;
+	padding: 40px;
+}
+
+.title-diamond{
+	margin-bottom: 20px;
+	font-size: 1.5em;
+}
+
+.text-diamond{
+	margin-bottom: 1.1em;
+}
+
+.saberMas{
+	background-color: #ce9bd2;
+	border-radius: 5px;
+	padding: 0.5em;
+	color: white;
+}
+
+/*estilo de contenedor de secciones*/
+.cont-secciones{
+	display: table;
+	text-align: center;
+	width: 100%;
+	height: auto;
+}
+
+/*estilo titulo de secciones*/
+.titulo-seccion{
+	font-size: 2em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+/*estilo de columnas seccion de perfumes*/
+.cont-p-columna{
+	display: table;
+	width: 45%;
+	height: auto;
+	padding: 5px;
+	display: inline-block;
+}
+
+/*estilo del contenido de las columnas de la seccion de perfume*/
+.cont-p-img{
+	width: 30%;
+	height: auto;
+	display: inline-block;
+}
+.cont-p-text{
+	width: 65%;
+	height: auto;
+	text-align: left;
+	display: inline-block;
+	float: right;
+	margin-top: 2.5em;
+}
+
+.oculto, .oculto-j{
+	display: none;
+}
+
+a.mostrar, .mostrar2, .mostrar3, .mostrar4, .mostrar5{
+	text-align: left;
+	text-decoration: none;
+	color: #ce9bd2;
+	font-family: 'lato', sans-serif;
+
+}
+
+/*estilo flecha de navegacion lateral*/
+.flecha{
+	width: 5%;
+	height: auto;
+	float: right;
+	display: inline-block;
+
+}
+
+#flecha-grande:hover{
+	opacity: 0.5;
+}
+
+/*Barra de navegacion con imagenes en seccion de perfumes*/
+#cont-p-segundoN{
+
+	display: table;
+	width: 100%;
+	height: 200px;
+	margin: 0 auto;
+}
+
+/* Asignamos perspectiva a nuestro contenedor */
+.flip-container {
+  perspective: 1000;
+  border: 1px solid #d9d9d9;
+
+  /* Para Firefox - IE10+ debemos agregar propiedades extras */
+  -moz-transform-style: preserve-3d;
+  -moz-transform: perspective(1000px);
+  -ms-transform-style: preserve-3d;
+  -ms-transform: perspective(1000px);
+
+  display: inline-block;
+	width: 30%;
+	height: auto;
+	margin: 0;
+}
+ 
+/* preserve-3d: Indicamos que todo elemento hijo del div flipper estara en un espacio 3D XYZ  */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+ 
+.front, .back {
+  /* Backface: Nos permite ocultar la parte posterior de los elementos html */
+  /* en este caso FRONT - BACK */
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+ 
+/* FRONT: eje Y = 0   */
+.front {
+  transform: rotateY(0deg);
+}
+ 
+/* BACK: eje Y = -180, se mantendra oculto */
+.back {
+  transform: rotateY(-180deg);
+}
+
+/* Hover */
+.flip-container:hover .front {
+  transform: rotateY(180deg);
+}
+.flip-container:hover .back {
+  transform: rotateY(0deg);
+}
+/* Toggle - Moviles */
+.flip-container.hover .front {
+  transform: rotateY(180deg);
+}
+.flip-container.hover .back {
+  transform: rotateY(0deg);
+}
+
+/* Ajuste y personalizacion*/
+
+.back{
+	width: 325px;
+	height: 180px;
+	background-color: #424242;
+	color: white;
+
+}
+
+.back > h2{
+	margin-top: 10%;
+	margin-bottom: 3%;
+}
+
+.list-nav2 > ul > li {
+	float: center;
+	display: block;
+	padding: 2%;
+	list-style: none;
+	text-decoration: none;
+
+}
+
+.list-nav2 > ul > li > a {
+	color: white;
+}
+
+.list-nav2 > ul > li > a:hover{
+	border-bottom: 1px solid white;
+	
+}
+
+/*tamaño de las columnas joyas*/
+.cont-columna-j{
+	width: 30%;
+	height: auto;
+	display: inline-block;
+	float: left;
+	text-align: left;
+}
+
+/*img dimension*/
+.img-j > img{
+	width: 100%;
+	height: auto;
+}
+/*contenedor texto  joyas*/
+.cont-principal-text-j{
+	width: 90%;
+	height: 280px;
+}
+
+#text-contacto{
+	width: 100%;
+	height: auto;
+	font-size: 1em;
+	display: block;
+	margin-bottom: 1em;
+}
+
+#text-contacto > p{
+	width: 60%;
+	height: auto;
+	float: center;
+	display: inline-block;
+}
+
+/* ===== Estilo formulario ===== */
+.cont-principal-c{
+	width: 50%;
+	height: auto;
+	display: inline-block;
+	float: left;
+}
+
+/*map estilo*/
+#map{
+	margin-top: 25px;
+}
+
+/* === Remove input autofocus webkit === */ 
+*:focus {
+ outline: none;
+  } 
+
+ /* === List Styles === */ 
+
+ #contacto_form ul { 
+ 	width: 100%; 
+ 	list-style-type: none; 
+ 	list-style-position: outside; 
+ 	margin: 0px; padding: 0px; 
+ } 
+
+ #contacto_form li { 
+
+ 	padding: 10px; 
+ 	border-bottom: 1px solid #eee;
+ 	position: relative; 
+ }
+
+ #contacto_form label{
+ 	text-align: left;
+ 	font-size: 1em;
+ 	float: left;
+ }
+
+ /*estilo texto formulario*/
+	
+	#contacto_form > ul > li > span{
+		font-size: 2em;
+ }
+
+  #contacto_form input{
+ 	width: 60%;
+ 	border-radius: 2px;
+ 	border: 0px;
+ 	padding: 10px;
+
+
+ }
+
+ #contacto_form textarea{
+ 	width: 65%;
+ 	font-size: 1em;
+ 	border: 0px;
+ 	font-family: 'lato', sans-serif;
+ }
+
+.submit{
+	padding: 0.5em;
+	background-color: #ce9bd2;
+	font-size: 1em;
+	font-family: 'lato',sans-serif;
+	color: white;
+	border: none;
+	border-radius: 0.3em;
+
+}
+
+.container-footer{
+	width: 100%;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: center;
+	margin-top: 1em;
+	border-top: 1px solid #eee;
+}
+
+.img-redes a > img{
+	width: 3%;
+	height: auto;
+}
+
+/* ====== Responsive del sitio ====== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
